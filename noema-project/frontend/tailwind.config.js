@@ -33,7 +33,7 @@ export default {
         }
       },
       fontFamily: {
-        'sans': ['Nunito', 'system-ui', 'sans-serif'],
+        'sans': ['Lexend', 'system-ui', 'sans-serif'],
         'display': ['Playfair Display', 'serif'],
         'mono': ['JetBrains Mono', 'monospace'],
       },

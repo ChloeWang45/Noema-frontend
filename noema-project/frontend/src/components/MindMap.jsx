@@ -44,7 +44,8 @@ const NoteModal = ({ note, onClose, isAI }) => (
 const CustomThemeNode = ({ data }) => (
   <div className="relative group">
     <div className="absolute inset-0 bg-gradient-to-r from-sage-400 via-sage-500 to-sage-600 rounded-2xl blur-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500"></div>
-    <div className="relative px-8 py-6 rounded-2xl shadow-2xl border-2 bg-gradient-to-br from-sage-800 via-sage-900 to-stone-900 border-sage-500 text-white" style={{ minWidth: '280px', maxWidth: '400px' }}>
+    <div className="relative px-8 py-6 rounded-2xl shadow-2xl border-2 bg-sage-700 border-sage-600 text-white w-auto hover:scale-110 transition-all duration-500 backdrop-blur-sm" style={{ minWidth: '280px', maxWidth: '400px' }}>
+
       <div className="flex items-center gap-2 mb-3">
         <div className="p-1.5 rounded-lg bg-gradient-to-br from-amber-400 to-yellow-500 shadow-lg">
           <Stars size={14} className="text-amber-900" />
