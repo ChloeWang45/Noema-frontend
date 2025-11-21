@@ -14,9 +14,9 @@ export default {
           300: '#a3aaa3',
           400: '#7d867d',
           500: '#5f6b5f',
-          600: '#77d377ff',
-          700: '#3d463d',
-          800: '#333933',
+          600: '#a3f2a3ff',
+          700: '#7dbe7dff',
+          800: '#58a458ff',
           900: '#4d8a4dff',
         },
         stone: {
@@ -33,7 +33,7 @@ export default {
         }
       },
       fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'sans': ['Nunito', 'system-ui', 'sans-serif'],
         'display': ['Playfair Display', 'serif'],
         'mono': ['JetBrains Mono', 'monospace'],
       },
