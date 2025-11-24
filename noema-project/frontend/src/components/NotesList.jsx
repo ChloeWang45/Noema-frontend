@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { Trash2, Tag, Edit2, Check, X } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { Trash2, Tag, Edit2, Check, X, Search } from 'lucide-react';
 
 const NotesList = ({ notes, onDeleteNote, onEditNote }) => {
   const [editingId, setEditingId] = useState(null);
   const [editText, setEditText] = useState('');
+  const [query, setQuery] = useState('');
 
   const startEditing = (note) => {
     setEditingId(note.id);
@@ -31,6 +32,16 @@ const NotesList = ({ notes, onDeleteNote, onEditNote }) => {
     }
   };
 
+  const filteredNotes = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return notes;
+    return notes.filter((note) => {
+      const text = (note.text || '').toLowerCase();
+      const theme = (note.theme || '').toLowerCase();
+      return text.includes(q) || theme.includes(q);
+    });
+  }, [notes, query]);
+
   if (notes.length === 0) {
     return (
       <div className="card max-w-4xl mx-auto text-center py-12 animate-fade-in">
@@ -43,7 +54,37 @@ const NotesList = ({ notes, onDeleteNote, onEditNote }) => {
 
   return (
     <div className="max-w-4xl mx-auto space-y-3 animate-fade-in">
-      {notes.map((note, index) => (
+      {/* Search bar */}
+      <div className="flex items-center gap-3">
+        <div className="flex items-center w-full bg-white border border-stone-200 rounded-lg px-3 py-2 shadow-sm">
+          <Search className="text-stone-400" size={18} />
+          <input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search notes by keyword or theme..."
+            className="ml-3 w-full bg-transparent outline-none text-stone-700 placeholder:text-stone-400"
+            aria-label="Search notes"
+          />
+          {query && (
+            <button
+              onClick={() => setQuery('')}
+              className="p-1 rounded-md text-stone-500 hover:text-stone-700 ml-2"
+              aria-label="Clear search"
+              title="Clear search"
+            >
+              <X size={16} />
+            </button>
+          )}
+        </div>
+      </div>
+
+      {filteredNotes.length === 0 && (
+        <div className="card max-w-4xl mx-auto text-center py-8">
+          <p className="text-stone-500">No notes match your search "{query}".</p>
+        </div>
+      )}
+
+      {filteredNotes.length > 0 && filteredNotes.map((note, index) => (
         <div
           key={note.id}
           className="card hover:shadow-lg transition-all duration-300 group border-l-4 border-sage-500 hover:border-sage-700 hover:-translate-y-1"
