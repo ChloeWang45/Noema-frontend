@@ -67,7 +67,7 @@ function App() {
       const API_BASE =
         import.meta.env.MODE === "development"
           ? "http://localhost:3000"
-          : "https://noema-7j894znid-chloewang45s-projects.vercel.app/";
+          : "https://noema-7j894znid-chloewang45s-projects.vercel.app";
 
       const response = await axios.post(`${API_BASE}/api/analyze`, {
         notes: notes.map(note => note.text),
