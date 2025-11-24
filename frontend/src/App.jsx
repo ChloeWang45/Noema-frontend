@@ -65,7 +65,7 @@ function App() {
 
     try {
       const response = await axios.post(
-      'https://YOUR-VERCEL-PROJECT-NAME.vercel.app/api/analyze',
+      'https://noema-ji2q9l9xo-chloewang45s-projects.vercel.app/api/analyze',
       {
         notes: notes.map(note => note.text),
       }
