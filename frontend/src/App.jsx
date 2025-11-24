@@ -64,9 +64,13 @@ function App() {
     setError(null);
 
     try {
-      const response = await axios.post('/api/analyze', {
+      const response = await axios.post(
+      'https://YOUR-VERCEL-PROJECT-NAME.vercel.app/api/analyze',
+      {
         notes: notes.map(note => note.text),
-      });
+      }
+    );
+
 
       const { themes: analyzedThemes, insights: generatedInsights } = response.data;
 
