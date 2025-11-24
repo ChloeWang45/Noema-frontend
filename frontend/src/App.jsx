@@ -64,12 +64,15 @@ function App() {
     setError(null);
 
     try {
-      const response = await axios.post(
-      'https://noema-ji2q9l9xo-chloewang45s-projects.vercel.app/api/analyze',
-      {
+      const API_BASE =
+        import.meta.env.MODE === "development"
+          ? "http://localhost:3000"
+          : "https://noema-ji2q9l9xo-chloewang45s-projects.vercel.app";
+
+      const response = await axios.post(`${API_BASE}/api/analyze`, {
         notes: notes.map(note => note.text),
-      }
-    );
+      });
+
 
 
       const { themes: analyzedThemes, insights: generatedInsights } = response.data;
