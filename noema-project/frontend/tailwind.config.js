@@ -8,17 +8,18 @@ export default {
     extend: {
       colors: {
         sage: {
-          50: '#f6f7f6',
-          100: '#e3e5e3',
-          200: '#c7cbc7',
-          300: '#a3aaa3',
-          400: '#7d867d',
-          500: '#5f6b5f',
-          600: '#a3f2a3ff',
-          700: '#7dbe7dff',
-          800: '#58a458ff',
-          900: '#4d8a4dff',
+        50:  '#faf7fc',   // very light lavender wash
+        100: '#f4eff8',   // soft pastel lilac
+        200: '#e6dbf0',   // light lavender
+        300: '#d3bfe6',   // muted lilac
+        400: '#b896d8',   // stronger lilac
+        500: '#9c6cc8',   // classic lilac/purple
+        600: '#b28be8',   // bright lavender accent
+        700: '#9b6cd9',   // deeper accent purple
+        800: '#824fca',   // darker lilac-purple
+        900: '#6e3bb5',   // richest deep purple
         },
+
         stone: {
           50: '#fafaf9',
           100: '#f5f5f4',

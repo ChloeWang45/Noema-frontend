@@ -19,7 +19,7 @@ const NoteModal = ({ note, onClose, isAI }) => {
       <div 
         className={`relative max-w-2xl w-full rounded-2xl shadow-2xl border-2 p-8 animate-scaleIn ${
           isAI 
-            ? 'bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 border-purple-300' 
+            ? 'bg-gradient-to-br from-sage-50 via-pink-50 to-blue-50 border-sage-300' 
             : 'bg-gradient-to-br from-white via-stone-50 to-white border-stone-300'
         }`}
         onClick={(e) => e.stopPropagation()}
@@ -33,7 +33,7 @@ const NoteModal = ({ note, onClose, isAI }) => {
         
         <div className="flex items-center gap-2 mb-4">
           {isAI ? (
-            <div className="px-3 py-1 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 text-white text-xs font-black rounded-full flex items-center gap-1">
+            <div className="px-3 py-1 bg-gradient-to-r from-sage-600 via-pink-600 to-blue-600 text-white text-xs font-black rounded-full flex items-center gap-1">
               <Sparkles size={12} />
               AI NOTE
             </div>
@@ -136,14 +136,14 @@ const CustomAINoteNode = ({ data }) => {
   
   return (
     <div className="relative group">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 rounded-xl blur-xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 animate-pulse-gentle"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-sage-400 via-pink-400 to-blue-400 rounded-xl blur-xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 animate-pulse-gentle"></div>
       
       <div 
-        className="relative px-5 py-4 rounded-xl shadow-xl border-2 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 border-purple-300 text-purple-900 w-auto hover:shadow-2xl hover:border-purple-500 hover:-translate-y-2 hover:scale-105 transition-all duration-400 backdrop-blur-sm cursor-pointer" 
+        className="relative px-5 py-4 rounded-xl shadow-xl border-2 bg-gradient-to-br from-sage-50 via-pink-50 to-blue-50 border-sage-300 text-sage-900 w-auto hover:shadow-2xl hover:border-sage-500 hover:-translate-y-2 hover:scale-105 transition-all duration-400 backdrop-blur-sm cursor-pointer" 
         style={{ minWidth: '260px', maxWidth: shouldTruncate ? '480px' : '520px' }}
         onClick={() => data.onExpand && data.onExpand(fullText, true)}
       >
-        <div className="absolute -top-2 -left-2 px-2 py-0.5 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 text-white text-[9px] font-black rounded-full shadow-lg flex items-center gap-1 animate-pulse-gentle">
+        <div className="absolute -top-2 -left-2 px-2 py-0.5 bg-gradient-to-r from-sage-600 via-pink-600 to-blue-600 text-white text-[9px] font-black rounded-full shadow-lg flex items-center gap-1 animate-pulse-gentle">
           <Sparkles size={10} />
           AI
         </div>
@@ -152,12 +152,12 @@ const CustomAINoteNode = ({ data }) => {
           {displayText}
         </div>
         
-        <div className="absolute bottom-2 right-2 p-1 bg-purple-200 rounded-full opacity-60 group-hover:opacity-100 transition-opacity">
-          <Maximize2 size={12} className="text-purple-600" />
+        <div className="absolute bottom-2 right-2 p-1 bg-sage-200 rounded-full opacity-60 group-hover:opacity-100 transition-opacity">
+          <Maximize2 size={12} className="text-sage-600" />
         </div>
         
         <div className="absolute top-2 right-2">
-          <Zap size={12} className="text-purple-400 animate-pulse-gentle" />
+          <Zap size={12} className="text-sage-400 animate-pulse-gentle" />
         </div>
       </div>
     </div>
@@ -466,7 +466,7 @@ const MindMap = React.forwardRef(({ themes, notes, insights }, ref) => {
       )}
       
       {isAnimating && (
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-blue-500/10 z-50 pointer-events-none backdrop-blur-[1px] animate-pulse-gentle"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-sage-500/10 via-pink-500/10 to-blue-500/10 z-50 pointer-events-none backdrop-blur-[1px] animate-pulse-gentle"></div>
       )}
       
       <ReactFlow
@@ -523,8 +523,8 @@ const MindMap = React.forwardRef(({ themes, notes, insights }, ref) => {
               <span className="text-xs font-bold text-stone-800">Your Notes</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 shadow-lg"></div>
-              <span className="text-xs font-bold text-purple-700">AI Notes</span>
+              <div className="w-3 h-3 rounded-full bg-sage-400 shadow-lg"></div>
+              <span className="text-xs font-bold text-sage-400">AI Notes</span>
             </div>
           </div>
         </Panel>
@@ -539,7 +539,7 @@ const MindMap = React.forwardRef(({ themes, notes, insights }, ref) => {
             </div>
             <div className="w-px h-4 bg-stone-300"></div>
             <div className="flex items-center gap-2">
-              <Sparkles size={16} className="text-purple-500" />
+              <Sparkles size={16} className="text-sage-400" />
               <span className="text-sm font-black text-stone-800">
                 {(() => {
                   let aiNoteCount = 0;
@@ -572,7 +572,7 @@ const MindMap = React.forwardRef(({ themes, notes, insights }, ref) => {
         </Panel>
 
         {isAnimating && (
-          <Panel position="bottom-center" className="!bg-gradient-to-r !from-purple-600 !via-pink-600 !to-blue-600 !text-white !px-6 !py-3 !shadow-2xl !border-2 !border-purple-400 !rounded-full animate-pulse-gentle">
+          <Panel position="bottom-center" className="!bg-gradient-to-r !from-sage-600 !via-pink-600 !to-blue-600 !text-white !px-6 !py-3 !shadow-2xl !border-2 !border-sage-400 !rounded-full animate-pulse-gentle">
             <div className="flex items-center gap-3">
               <Zap size={18} className="animate-pulse-gentle" />
               <span className="text-sm font-black">

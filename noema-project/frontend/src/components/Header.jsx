@@ -6,7 +6,7 @@ const Header = () => {
     <header className="glass-panel border-b border-stone-200 backdrop-blur-md bg-white/90 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-sage-600 to-sage-800 rounded-xl flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300 hover:scale-105 active:scale-95 transform transition-transform">
+          <div className="w-12 h-12 bg-sage-300 rounded-xl flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300 hover:scale-105 active:scale-95 transform transition-transform">
             <Brain size={24} className="text-white" />
           </div>
           <div>

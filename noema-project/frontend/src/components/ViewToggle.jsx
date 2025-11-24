@@ -8,7 +8,7 @@ const ViewToggle = ({ currentView, onViewChange, onReplayAnimation, showReplay }
         onClick={() => onViewChange('list')}
         className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-200 ${
           currentView === 'list'
-            ? 'bg-sage-700 text-white shadow-md scale-105'
+            ? 'bg-sage-400 text-white shadow-md scale-105'
             : 'text-stone-600 hover:bg-stone-100 hover:scale-105'
         }`}
       >
@@ -20,7 +20,7 @@ const ViewToggle = ({ currentView, onViewChange, onReplayAnimation, showReplay }
         onClick={() => onViewChange('map')}
         className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-200 ${
           currentView === 'map'
-            ? 'bg-sage-700 text-white shadow-md scale-105'
+            ? 'bg-sage-400 text-white shadow-md scale-105'
             : 'text-stone-600 hover:bg-stone-100 hover:scale-105'
         }`}
       >
