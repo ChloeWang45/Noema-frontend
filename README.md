@@ -4,7 +4,7 @@
 
 Noēma is an AI-powered thought organization tool that helps you discover obscure relationships between ideas and generate new insights through intelligent synthesis. By combining natural language processing with beautiful visual design, Noēma enhances creative thinking, brainstorming, and research.
 
-![Noema](https://via.placeholder.com/1200x600/5f6b5f/ffffff?text=Noema)
+![Noema]([https://via.placeholder.com/1200x600/5f6b5f/ffffff?text=Noema](https://chloewang45.github.io/Noema-frontend/))
 
 ## ✨ Features
 
@@ -156,11 +156,5 @@ This project is licensed under the MIT License.
 - React Flow for visualization capabilities
 - Tailwind CSS for the design system
 - Lucide for beautiful icons
-
-## 📧 Contact
-
-Project Link: [https://github.com/yourusername/noema](https://github.com/yourusername/noema)
-
+- 
 ---
-
-**Built with ❤️ for creative thinkers, researchers, and brainstormers**
